@@ -1,10 +1,23 @@
 {
+  "singleQuote": true,
+  "semi": true,
   "plugins": [
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss"
   ],
-  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
-  "singleQuote": true
+  "importOrder": [
+    "^react$",
+    "",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^@/core/(.*)$",
+    "^@/lib/(.*)$",
+    "",
+    "^@/components/(.*)$",
+    "",
+    "^[./]"
+  ],
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "importOrderTypeScriptVersion": "5.0.0",
+  "importOrderCaseSensitive": false
 }
