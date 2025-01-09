@@ -11,6 +11,12 @@ export default $config({
     };
   },
   async run() {
-    new sst.aws.Nextjs('qubia-web');
+    const auth = new sst.aws.Auth('QubiaAuth', {
+      authorizer: 'auth/index.handler',
+    });
+
+    new sst.aws.Nextjs('QubiaWeb', {
+      link: [auth],
+    });
   },
 });

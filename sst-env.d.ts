@@ -6,7 +6,11 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
-    "qubia-web": {
+    "QubiaAuth": {
+      "type": "sst.aws.Auth"
+      "url": string
+    }
+    "QubiaWeb": {
       "type": "sst.aws.Nextjs"
       "url": string
     }
