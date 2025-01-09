@@ -1,0 +1,9 @@
+# Ignore build output
+.next
+out
+
+# Ignore dependencies
+node_modules
+
+# Ignore SST-related files
+.sst
